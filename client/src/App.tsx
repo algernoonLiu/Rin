@@ -10,7 +10,7 @@ import { client } from './main'
 import { CallbackPage } from './page/callback'
 import { FeedPage, TOCHeader } from './page/feed'
 import { FeedsPage } from './page/feeds'
-import { FriendsPage } from './page/friends'
+// import { FriendsPage } from './page/friends'
 import { HashtagPage } from './page/hashtag.tsx'
 import { HashtagsPage } from './page/hashtags.tsx'
 import { Settings } from "./page/settings.tsx"
@@ -23,6 +23,7 @@ import { tryInt } from './utils/int'
 import { SearchPage } from './page/search.tsx'
 import { Tips, TipsPage } from './components/tips.tsx'
 import { useTranslation } from 'react-i18next'
+import { AboutPage } from './page/about'
 
 function App() {
   const ref = useRef(false)
@@ -79,10 +80,14 @@ function App() {
               <TimelinePage />
             </RouteMe>
 
-
-            <RouteMe path="/friends">
-              <FriendsPage />
+            <RouteMe path="/about">
+              <AboutPage />
             </RouteMe>
+
+
+            {/* <RouteMe path="/friends">
+              <FriendsPage />
+            </RouteMe> */}
 
             <RouteMe path="/hashtags">
               <HashtagsPage />
